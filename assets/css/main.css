@@ -516,17 +516,58 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
 .hero {
   width: 100%;
   min-height: 100vh;
   position: relative;
   padding: 80px 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.hero .portifolio-languages{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #252422;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.portifolio-languages > ul{
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+.portifolio-languages > ul > li{
+    display: inline-block;
+    margin: 1rem;
+}
+.portifolio-languages > ul > li > .flag{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 1s ease;
+
+}
+.brazil{
+    background-image: url("../icons/Brazil.png");
+}
+.united-state{
+    background-image: url("../icons/united-states-of-america.png");
+}
+.spain{
+    background-image: url("../icons/Spain.png");
+}
+.brazil:hover{
+    border: 1px solid #FFCC29;
+}
+.united-state:hover{
+    border: 1px solid #FFFFFF;
+}
+.spain:hover{
+    border: 1px solid #AA151B;
 }
 
 .hero img {
@@ -760,17 +801,8 @@ section,
 .resume-document > p{
    margin-top: 0.5rem;
 }
-.resume-document > abbr{
-    margin-left: 1rem;
-}
 
 
-
-
-
-/*--------------------------------------------------------------
-# Portfolio Section
---------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -1031,9 +1063,6 @@ section,
   background-color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -1105,6 +1134,7 @@ section,
   color: var(--default-color);
   background-color: var(--surface-color);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  transition: border 0.7s ease;
 }
 
 .contact .php-email-form input[type=text]:focus,
