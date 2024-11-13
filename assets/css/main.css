@@ -753,6 +753,20 @@ section,
   background: var(--background-color);
   border: 2px solid var(--accent-color);
 }
+.container .resume-document{
+    width: 100%;
+    display: flex;
+}
+.resume-document > p{
+   margin-top: 0.5rem;
+}
+.resume-document > abbr{
+    margin-left: 1rem;
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Portfolio Section
