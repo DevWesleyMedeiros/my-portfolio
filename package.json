@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/DevWesleyMedeiros/my-portfolio/issues"
   },
-  "homepage": "https://github.com/DevWesleyMedeiros/my-portfolio#readme"
+  "homepage": "https://github.com/DevWesleyMedeiros/my-portfolio#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.15"
+  }
 }
