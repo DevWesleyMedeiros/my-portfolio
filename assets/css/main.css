@@ -805,6 +805,10 @@ section,
 }
 
 /* INÍCIO DOS ESTILOS PARA OS CARDS */
+
+.portifolio > .hidden {
+    display: none;
+}
 .portifolio {
     width: 100%;
     min-height: 100vh;
@@ -837,9 +841,7 @@ section,
     cursor: pointer;
     transition: all 0.5s ease;
   }
-  .hidden {
-    display: none;
-}
+  
   .projects-list ul .project:hover{
     color: #7d0fe3;
     transform: scale(1.10);

@@ -1,5 +1,5 @@
 const flags = [...document.querySelectorAll(".country-flag > .flag")];
-const linksProjects = [...document.querySelectorAll(".portifolio > .projects-list > .filter-project > .project")];
+
 
 flags.forEach((flag) => {
     flag.addEventListener("click", (evt) => {
@@ -7,6 +7,8 @@ flags.forEach((flag) => {
         changeLanguage(lang);
     });
 });
+
+const linksProjects = [...document.querySelectorAll(".portifolio > .projects-list > .filter-project > .project")];
 
 linksProjects.forEach((link) => {
     link.addEventListener("click", (evt) => {
