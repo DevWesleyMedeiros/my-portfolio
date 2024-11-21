@@ -857,6 +857,18 @@ section,
   .center .company-SPA{
     background-image: url("../img/imagem_SPA_empresa.jpg");
   }
+  .center .Cena-SPA{
+    background-image: url("../img/imagem_imobiliaria.jpg");
+  }
+  .center .hangman-game{
+    background-image: url("../img/imagem_jogo_da_forca.jpg");
+  }
+  .center .color-flipper{
+    background-image: url("../img/imagem_gerador_de_cores.jpg");
+  }
+  .center .stop-game{
+    background-image: url("../img/imagem_jogo_stop.jpg");
+  }
   .center .card {
     background-position: bottom center;
     background-size: contain;
