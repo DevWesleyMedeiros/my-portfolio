@@ -884,6 +884,9 @@ section,
   .center .Monguilhott-clinic{
     background-image: url("../img/imagem_clinica_odontologica2.jpg");
   }
+  .center .task-manager{
+    background-image: url("../img/imagem_task_manager.jpg");
+  }
   .center .card {
     background-position: bottom center;
     background-size: contain;
