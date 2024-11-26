@@ -172,12 +172,17 @@ h6 {
   text-align: center;
   width: 40px;
   height: 40px;
-  transition: 0.3s;
+  transition: all 0.5s ease;
 }
 
-.header .social-links a:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+.header .social-links .github:hover {
+  background-color: #181717;
+}
+.header .social-links .instagram:hover {
+    background-color:  #FD1D1D;
+}
+.header .social-links .linkedin:hover {
+    background-color: #0077B5;
 }
 
 @media (min-width: 1200px) {
@@ -806,8 +811,9 @@ section,
 
 /* INÍCIO DOS ESTILOS PARA OS CARDS */
 
-.portifolio > .hidden {
-    display: none;
+.hidden {
+    display: none !important;
+    transition: all 0.7s !important;
 }
 .portifolio {
     width: 100%;
