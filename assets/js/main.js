@@ -49,10 +49,10 @@
 // Animação com scrool ultilizando AOS.js
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 500,
       easing: 'ease-in-out',
       once: true,
-      mirror: false
+      mirror: true
     });
   }
   window.addEventListener('load', aosInit);
@@ -96,11 +96,8 @@
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
-
-
-
   
-// Correct scrolling position upon page load for URLs containing hash links.
+// Links hash da página carregados a cada scroll.
   window.addEventListener('load', function(e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
