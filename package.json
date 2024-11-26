@@ -29,8 +29,5 @@
   "homepage": "https://github.com/DevWesleyMedeiros/my-portfolio#readme",
   "devDependencies": {
     "tailwindcss": "^3.4.15"
-  },
-  "dependencies": {
-    "jquery": "^3.7.1"
   }
 }

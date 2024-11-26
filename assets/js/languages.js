@@ -1,6 +1,3 @@
-import $ from 'jquery';
-
-// Script que ativa idiomas diferentes no portifólio
 const flags = [...document.querySelectorAll(".country-flag > .flag")];
 
 flags.forEach((flag) => {
@@ -9,6 +6,7 @@ flags.forEach((flag) => {
         changeLanguage(lang);
     });
 });
+
 function changeLanguage(lang) {
     if (lang === 'United-states') {
         window.location.href = 'english.html';
@@ -18,26 +16,35 @@ function changeLanguage(lang) {
         window.location.href = 'index.html';
     }
 }
-// Fim do primeiro script -----
 
-$(function () {
-    $('.portifolio > .projects-list > .filter-project > .project').on('click', function(evt) {
-        alert('clicado');
-        const linkId = $(this).attr('id');
-        const cards = $(".portifolio > .center > .card");
-        cards.fadeIn().removeClass('hidden');
-        if (linkId === "done") {
-            cards.each(function() {
-                if (!$(this).hasClass("finished")) {
-                    $(this).fadeOut().addClass("hidden");
-                }
+(function () {
+    const filterItems = document.querySelectorAll('.portifolio > .projects-list > .filter-project > .project');
+    
+    filterItems.forEach((filterItem) => {
+        filterItem.addEventListener('click', (evt) => {
+            const linkId = evt.target.id; 
+            const cards = document.querySelectorAll(".portifolio > .center > .card"); 
+            cards.forEach((card) => {
+                card.classList.remove('hidden');
+                card.style.opacity = 0; 
+                card.style.transition = 'opacity 0.5s';
+                card.style.opacity = 1; 
             });
-        } else if (linkId === "undone") {
-            cards.each(function() {
-                if (!$(this).hasClass("unfinished")) {
-                    $(this).fadeOut().addClass("hidden");
-                }
-            });
-        }
-    })
-})
+            if (linkId === "done") {
+                cards.forEach((card) => {
+                    if (!card.classList.contains("finished")) {
+                        card.style.opacity = 0;  
+                        card.classList.add("hidden"); 
+                    }
+                });
+            } else if (linkId === "undone") {
+                cards.forEach((card) => {
+                    if (!card.classList.contains("unfinished")) {
+                        card.style.opacity = 0; 
+                        card.classList.add("hidden"); 
+                    }
+                });
+            }
+        });
+    });
+})();

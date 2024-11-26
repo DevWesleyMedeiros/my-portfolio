@@ -216,3 +216,62 @@
     padding: 20px;
   }
 }
+=====================================================================
+
+//   /**
+//    * Toggle mobile nav dropdowns
+//    */
+//   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
+//     navmenu.addEventListener('click', function(e) {
+//       e.preventDefault();
+//       this.parentNode.classList.toggle('active');
+//       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+//       e.stopImmediatePropagation();
+//     });
+//   });
+
+
+=======================================================================
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+/**
+//    * Inicia o swiper sliders
+//    */
+//   function initSwiper() {
+//     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+//       let config = JSON.parse(
+//         swiperElement.querySelector(".swiper-config").innerHTML.trim()
+//       );
+
+//       if (swiperElement.classList.contains("swiper-tab")) {
+//         initSwiperWithCustomPagination(swiperElement, config);
+//       } else {
+//         new Swiper(swiperElement, config);
+//       }
+//     });
+//   }
+
+//   window.addEventListener("load", initSwiper);
+=============================================================================
+ <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+//   Isotope Layoult e filtro
+(function () {
+    "use strict";
+
+    const $grid = $(".portifolio > .center").isotope({
+        itemSelector: '.card', 
+        layoutMode: 'fitRows',
+        filter: '*'           
+    });
+
+    $(".portifolio > .projects-list > .filter-project > .project").on('click', function (evt) {
+        const linkId = $(this).attr('id');
+
+        if (linkId === "done") {
+            $grid.isotope({ filter: '.finished' });
+        } else if (linkId === "undone") {
+            $grid.isotope({ filter: '.unfinished' });
+        } else {
+            $grid.isotope({ filter: '*' });
+        }
+    });
+})();
