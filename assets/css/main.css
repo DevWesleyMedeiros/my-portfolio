@@ -893,6 +893,9 @@ section,
   .center .task-manager{
     background-image: url("../img/imagem_task_manager.jpg");
   }
+  .center .free-books{
+    background-image: url("../img/imagem_site_livros.jpg");
+  }
   .center .card {
     background-position: bottom center;
     background-size: contain;
