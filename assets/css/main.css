@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+html, body {
+  height: 100%;
+}
+
+
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
@@ -117,6 +129,7 @@ h6 {
   }
 }
 
+/* Inicio de estilização do Header */
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -202,7 +215,6 @@ h6 {
 .header.header-show {
   left: 0;
 }
-
 .header .header-toggle {
   color: var(--contrast-color);
   background-color: var(--accent-color);
@@ -220,22 +232,22 @@ h6 {
   z-index: 9999;
   transition: background-color 0.3s;
 }
-
 .header .header-toggle:hover {
   color: var(--contrast-color);
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
+/* Fim da estilização do Header */
 
+/* Inicio da estilização da nav menu */
 .mobile-nav-toggle {
   display: none;
 }
-
 .navmenu {
   padding: 0;
   z-index: 9997;
 }
-
 .navmenu ul {
+ width: 50%;
   list-style: none;
   padding: 0 0 20px 0;
   margin: 0;
@@ -259,9 +271,8 @@ h6 {
     transition: width 0.7s ease-in-out;
 }
 .navmenu a:hover::before{
-    width: 50%;
+    width: 100%;
 }
-
 .navmenu a,
 .navmenu a:focus {
   color: var(--nav-color);
@@ -275,7 +286,6 @@ h6 {
   transition: 0.3s;
   width: 100%;
 }
-
 .navmenu a .navicon,
 .navmenu a:focus .navicon {
   font-size: 20px;
@@ -297,47 +307,39 @@ h6 {
   flex-shrink: 0;
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
 }
-
 .navmenu a .toggle-dropdown:hover,
 .navmenu a:focus .toggle-dropdown:hover {
   background-color: var(--accent-color);
   color: var(--contrast-color);
 }
-
 .navmenu a:hover,
 .navmenu .active,
 .navmenu .active:focus {
   color: var(--nav-hover-color);
 }
-
 .navmenu a:hover .navicon,
 .navmenu .active .navicon,
 .navmenu .active:focus .navicon {
   color: var(--accent-color);
 }
-
 .navmenu .active .toggle-dropdown,
 .navmenu .active:focus .toggle-dropdown {
   background-color: var(--accent-color);
   color: var(--contrast-color);
   transform: rotate(180deg);
 }
-
 .navmenu .dropdown {
   display: block;
 }
-
 .navmenu .dropdown a,
 .navmenu .dropdown a:focus {
   color: --nav-dropdown-color;
 }
-
 .navmenu .dropdown a:hover,
 .navmenu .dropdown .active,
 .navmenu .dropdown .active:focus {
   color: var(--nav-dropdown-hover-color);
 }
-
 .navmenu .dropdown ul {
   position: static;
   display: none;
@@ -349,39 +351,16 @@ h6 {
   box-shadow: none;
   transition: all 0.5s ease-in-out;
 }
-
 .navmenu .dropdown ul ul {
   background-color: rgba(33, 37, 41, 0.1);
 }
-
 .navmenu .dropdown>.dropdown-active {
   display: block;
   background-color: rgba(33, 37, 41, 0.03);
 }
+/* Fim da estilização da nav menu */
 
-
-.footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  padding: 40px 0;
-  position: relative;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.footer .copyright p {
-  margin-bottom: 0;
-}
-
-.footer .credits {
-  margin-top: 4px;
-  font-size: 13px;
-  text-align: center;
-}
-
-/*--------------------------------------------------------------
-# Ícone de Preloader
---------------------------------------------------------------*/
+/* Inicio da estilazação do ícone de pre-loader */
 #preloader {
   position: fixed;
   inset: 0;
@@ -413,10 +392,9 @@ h6 {
     transform: rotate(360deg);
   }
 }
+/* Fim da estilização do ícone de pre-loader */
 
-/*--------------------------------------------------------------
-# Botão de Scroll Top
---------------------------------------------------------------*/
+/* Inicio da estilização de botão scroll top*/
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -447,31 +425,26 @@ h6 {
   opacity: 1;
   bottom: 15px;
 }
+/* Fim da estilização do botão de scroll top */
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
+/* Desabilitar data-aos-delay para dispositivos mobiles */
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
+/* Estilização dos Breadcrumbs da página */
 .page-title {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 25px 0;
   position: relative;
 }
-
 .page-title h1 {
   font-size: 24px;
   font-weight: 700;
 }
-
 .page-title .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
@@ -481,21 +454,19 @@ h6 {
   font-size: 14px;
   font-weight: 400;
 }
-
 .page-title .breadcrumbs ol li+li {
   padding-left: 10px;
 }
-
 .page-title .breadcrumbs ol li+li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
+/* Fim da estilização dos Breadcrumbs da página */
 
-/*--------------------------------------------------------------
-# Global Sections
---------------------------------------------------------------*/
+
+/* Estilizações de global sections do projeto */
 section,
 .section {
   color: var(--default-color);
@@ -534,7 +505,9 @@ section,
 .section-title p {
   margin-bottom: 0;
 }
+/* Fim das estilizações para global sections do projeto */
 
+/* Inicio da estilização para a section dos idiomas do projeto */
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -554,13 +527,25 @@ section,
     top: 0;
     left: 0;
 }
-.portifolio-languages > ul{
-    display: inline-block;
+.portifolio-languages > .change-idiom {
     margin-top: 0.5rem;
+    list-style-type: none;
 }
-.portifolio-languages > ul > li{
+.portifolio-languages > .change-idiom > .country-flag{
     display: inline-block;
     margin: 1rem;
+    border-radius: 50%;
+    transition: all 0.5s ease-in;
+}
+
+.brazil:hover{
+    border: 2px solid #FFCC29;
+}
+.united-states:hover{
+    border: 2px solid #FFFFFF;
+}
+.spain:hover{
+    border: 2px solid #AA151B;
 }
 .portifolio-languages .flag{
     width: 64px;
@@ -577,16 +562,6 @@ section,
 .spain{
     background-image: url("../icons/Spain.png");
 }
-.brazil:hover{
-    border: 2px solid #FFCC29;
-}
-.united-states:hover{
-    border: 2px solid #FFFFFF;
-}
-.spain:hover{
-    border: 2px solid #AA151B;
-}
-
 .hero img {
   position: absolute;
   inset: 0;
@@ -652,7 +627,7 @@ section,
     font-size: 20px;
   }
 }
-
+/* Fim da estilização para a section dos idiomas do projeto */
 
 .about .content h2 {
   font-weight: 700;
@@ -817,8 +792,8 @@ section,
 }
 .portifolio {
     width: 100%;
-    min-height: 100vh;
     padding: 80px 0;
+    overflow-x: auto;
   }
   .portifolio > h2 {
     color: var(--heading-color);
@@ -857,9 +832,20 @@ section,
     padding: 0.5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 25px;
-    column-gap: 5px;
+    row-gap: 15px;
+    column-gap: 15px;
   }
+  /* Cards para mobile */
+  @media (max-width: 1182px){
+    .portifolio > .center {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+  }
+  /* Fim cards para mobile */
+
+
   .center .agencie-card {
     background-image: url("../img/imagem_agencia_digital.jpg");
   }
@@ -896,11 +882,14 @@ section,
   .center .free-books{
     background-image: url("../img/imagem_site_livros.jpg");
   }
+  .center .motorcycle-showcase{
+    background-image: url("../img/imagem_vitrine_de_motos.jpg");
+  }
   .center .card {
     background-position: bottom center;
     background-size: contain;
     position: relative;
-    width: 320px;
+    width: 380px;
     aspect-ratio: 16/9;
     border-radius: 10px;
     border: 1px solid var(--default-color);
@@ -993,7 +982,6 @@ section,
     background-color: var(--accent-color);
     color: var(--background-color);
   }
-  
   /* FINAL DOS ESTILOS PARA OS CARDS */
 
 .services .service-item {
@@ -1429,9 +1417,6 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
-/*--------------------------------------------------------------
-# Portfolio Details Section
---------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1490,9 +1475,6 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
 .service-details .services-list {
   padding: 10px 30px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -1554,10 +1536,23 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+/* Inicio da estilização do footer */
+.footer {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-size: 14px;
+    padding: 40px 0;
+    position: relative;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+  
+  .footer .copyright p {
+    margin-bottom: 0;
+  }
+  
+  .footer .credits {
+    margin-top: 4px;
+    font-size: 13px;
+    text-align: center;
+  }
+  /* Fim da estilização do footer */

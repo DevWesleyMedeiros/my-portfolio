@@ -52,7 +52,7 @@
       duration: 500,
       easing: 'ease-in-out',
       once: true,
-      mirror: true
+      mirror: true,
     });
   }
   window.addEventListener('load', aosInit);
