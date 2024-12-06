@@ -42,4 +42,30 @@ function changeLanguage(lang) {
             }
         });
     });
+    sliderTop();
+
+    function sliderTop() {
+        const sliders = [
+            document.getElementById("i1"),
+            document.getElementById("i2"),
+            document.getElementById("i3"),
+        ];
+
+        let sliderAtual = 0;
+        const sliderMaximo = 2;
+        const time = 5000;
+
+        $(sliders[sliderAtual]).fadeTo(1000, 1);
+
+        function changeSliders() {
+            $(sliders[sliderAtual]).fadeOut(1000);
+            sliderAtual++;
+            if (sliderAtual > sliderMaximo) {
+                sliderAtual = 0;
+            }
+            $(sliders[sliderAtual]).fadeTo(1000, 1);
+        }
+
+        setInterval(changeSliders, time);
+    }
 })();
