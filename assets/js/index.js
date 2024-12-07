@@ -67,5 +67,5 @@ function changeLanguage(lang) {
         setInterval(changeSliders, 6000);
     }
     sliderTop();
-    
+
 })();

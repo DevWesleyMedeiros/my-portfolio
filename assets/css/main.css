@@ -1242,6 +1242,7 @@ section,
   .state{
     margin-right: 0.5rem;
     margin-top: 1rem;
+    position: relative;
   }
   .state p {
     display: flex;
@@ -1360,7 +1361,6 @@ section,
     }
   }
   
-  /* Plane */
   .state--default .icon svg {
     animation: land 0.6s ease forwards;
   }
