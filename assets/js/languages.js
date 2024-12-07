@@ -42,7 +42,6 @@ function changeLanguage(lang) {
             }
         });
     });
-    sliderTop();
 
     function sliderTop() {
         const sliders = [
@@ -50,22 +49,21 @@ function changeLanguage(lang) {
             document.getElementById("i2"),
             document.getElementById("i3"),
         ];
-
+    
         let sliderAtual = 0;
-        const sliderMaximo = 2;
-        const time = 5000;
-
+        const sliderMaximo = sliders.length - 1;
+    
         $(sliders[sliderAtual]).fadeTo(1000, 1);
-
+    
         function changeSliders() {
-            $(sliders[sliderAtual]).fadeOut(1000);
-            sliderAtual++;
-            if (sliderAtual > sliderMaximo) {
-                sliderAtual = 0;
-            }
-            $(sliders[sliderAtual]).fadeTo(1000, 1);
+            $(sliders[sliderAtual]).fadeOut(1000, function () {
+                sliderAtual = (sliderAtual + 1) > sliderMaximo ? 0 : sliderAtual + 1;
+                $(sliders[sliderAtual]).fadeTo(1000, 1);
+            });
         }
-
-        setInterval(changeSliders, time);
+        setInterval(changeSliders, 5000);
     }
+    
+    sliderTop();
+    
 })();

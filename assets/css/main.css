@@ -510,38 +510,41 @@ section,
 /* Inicio da estilização para a section dos idiomas do projeto */
 .hero {
   width: 100%;
-  min-height: 100vh;
   position: relative;
-  padding: 80px 0;
+  padding: 0 0;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  background-color: red;
 }
 .hero .portifolio-languages{
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: #252422;
     z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
 }
 /* Inicio da estilização do slider inicial */
-
 .main .hero .sliders{
     width: 100%;
     position: relative;
-    z-index: 2;
 }
 .hero .sliders .slider-images_slider{
-  background-color: #fff;
-  width: 100%;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 0px;
+    background-color: #fff;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+}
+.hero .slider .slider-images_slider > img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
 }
 .web-developer{
     filter: brightness(50%);    
@@ -575,6 +578,7 @@ section,
 .spain:hover{
     border: 2px solid #AA151B;
 }
+
 .portifolio-languages .flag{
     width: 64px;
     height: 64px;
@@ -609,7 +613,7 @@ section,
 }
 
 .hero .container {
-  position: relative;
+  position: absolute;
   z-index: 3;
 }
 
