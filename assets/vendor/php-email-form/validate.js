@@ -1,8 +1,6 @@
-/**
-* PHP Email Form Validation - v3.9
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
-*/
+
+// * Arquivo Javascript - Frontend - responsável por enviar os dados para o Backend via PHP Email Form Validation - v3.9
+
 (function () {
   "use strict";
 
