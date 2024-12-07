@@ -61,9 +61,8 @@ function changeLanguage(lang) {
                 $(sliders[sliderAtual]).fadeTo(1000, 1);
             });
         }
-        setInterval(changeSliders, 5000);
+        setInterval(changeSliders, 6000);
     }
-    
     sliderTop();
     
 })();

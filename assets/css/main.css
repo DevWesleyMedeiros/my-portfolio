@@ -515,7 +515,6 @@ section,
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  background-color: red;
 }
 .hero .portifolio-languages{
     display: flex;
@@ -552,7 +551,7 @@ section,
 .freelancer{
     filter: brightness(50%);
 }
-.idioms{
+.languages{
     filter: brightness(50%);
 }
 /* Final da estilização do slider inicial */
@@ -658,6 +657,44 @@ section,
   .hero p {
     font-size: 20px;
   }
+  
+  @media (max-width: 550px){
+    .portifolio-languages .flag{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .brazil{
+        background-image: url("../icons/Brasil-icon_32px.png");
+    }
+    .united-states{
+        background-image: url("../icons/USA-icon_32px.png");
+    }
+    .spain{
+        background-image: url("../icons/Espanha-icon_32px.png");
+    }
+    .hero h2{
+        font-size: 25px;
+    }
+    .hero p{
+        font-size: 20px;
+    }
+    .hero .container {
+        margin-top: 3rem;
+        background-color: transparent;
+      }
+  }
+}
+@media (max-width: 450px) {
+    .hero .portifolio-languages{
+        justify-content: flex-start;
+    }
+    .hero .container {
+        margin-top: 3rem;
+        padding-left: 3rem;
+        background-color: transparent;
+      }
 }
 /* Fim da estilização para a section dos idiomas do projeto */
 
