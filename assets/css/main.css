@@ -526,6 +526,9 @@ section,
     left: 0;
 }
 /* Inicio da estilização do slider inicial */
+.main{
+    overflow-x: hidden;
+}
 .main .hero .sliders{
     width: 100%;
     position: relative;
@@ -540,7 +543,6 @@ section,
 .hero .slider .slider-images_slider > img{
     width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
     object-fit: contain;

@@ -1,3 +1,4 @@
+// Script que altera o idioma do projeto
 const flags = [...document.querySelectorAll(".country-flag > .flag")];
 
 flags.forEach((flag) => {
@@ -17,6 +18,7 @@ function changeLanguage(lang) {
     }
 }
 
+// Filtro do cards de projetos
 (function () {
     const filterItems = document.querySelectorAll('.portifolio > .projects-list > .filter-project > .project');
     
@@ -43,6 +45,7 @@ function changeLanguage(lang) {
         });
     });
 
+    // Slider inicial
     function sliderTop() {
         const sliders = [
             document.getElementById("i1"),
