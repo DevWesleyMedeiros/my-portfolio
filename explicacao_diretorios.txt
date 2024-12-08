@@ -1,0 +1,1 @@
+Primeiramente, vamos criar uma pasta PUBLIC que será a pasta onde serão servidos arquivos estáticos entregues diretamente pelo servidor, sem processamento
