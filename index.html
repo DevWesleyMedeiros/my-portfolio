@@ -751,40 +751,42 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/jquery/jquery-3.7.1.min.js"></script>
 
   <script src="assets/js/index.js"></script>
   <script src="assets/js/libs.js"></script>
 
   <script defer>
+
     // Script que esconde o texto do botão do formulário e troca por outro para HTML em Português
-    function hiddenFormInputs(){
+    $(function(){
+        function hiddenFormInputs(){
         const inputFild = $('.php-email-form input, textarea');
 
         inputFild.each((index, input)=>{
             $(input).val("");
         })
-    }
-    function sentButton(){
-        $('.php-email-form').find('button p').html('Enviar');
-    }
+       }
+        function sentButton(){
+            $('.php-email-form').find('button p').html('Enviar');
+        }
 
-    $(".php-email-form").on('submit', function (event) {
-        const spansHTML = 
-        `
-            <span style="--i:5">F</span>
-            <span style="--i:6">e</span>
-            <span style="--i:7">i</span>
-            <span style="--i:8">t</span>
-            <span style="--i:8">o</span>
-        `;
-        setTimeout(() => {
-            $(this).find(".button p").html(spansHTML);
-            hiddenFormInputs();
-        }, 100);
-        setTimeout(sentButton, 10000);
-    });
-
+        $(".php-email-form").on('submit', function (event) {
+            const spansHTML = 
+            `
+                <span style="--i:5">F</span>
+                <span style="--i:6">e</span>
+                <span style="--i:7">i</span>
+                <span style="--i:8">t</span>
+                <span style="--i:8">o</span>
+            `;
+            setTimeout(() => {
+                $(this).find(".button p").html(spansHTML);
+                hiddenFormInputs();
+            }, 100);
+            setTimeout(sentButton, 10000);
+        });
+    })
   </script>
 </body>
 </html>

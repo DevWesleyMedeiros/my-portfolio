@@ -1,4 +1,5 @@
 // Script que altera o idioma do projeto
+
 const flags = [...document.querySelectorAll(".country-flag > .flag")];
 
 flags.forEach((flag) => {
@@ -59,7 +60,7 @@ function changeLanguage(lang) {
         $(sliders[sliderAtual]).fadeTo(1000, 1);
     
         function changeSliders() {
-            $(sliders[sliderAtual]).fadeOut(1000, function () {
+            $(sliders[sliderAtual]).fadeOut(500, function () {
                 sliderAtual = (sliderAtual + 1) > sliderMaximo ? 0 : sliderAtual + 1;
                 $(sliders[sliderAtual]).fadeTo(1000, 1);
             });
