@@ -3,7 +3,7 @@
   $receiving_email_address = 'devwesleymedeiros@yahoo.com';
 
   // Verifica se o file php-email-form.php existe no diretório php_email_form
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
+  if( file_exists($php_email_form = '../src/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
   } else {
     die( 'Indisponível o carregamento do PHP do formulário de Email');

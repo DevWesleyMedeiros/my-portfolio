@@ -1,8 +1,4 @@
 // Script que altera o idioma do projeto
-// import $ from 'jquery';
-// import 'bootstrap/js/bootstrap.bundle.min.js';
-// import 'bootstrap/dist/css/bootstrap.min.css'
-
 const flags = [...document.querySelectorAll(".country-flag > .flag")];
 
 flags.forEach((flag) => {
