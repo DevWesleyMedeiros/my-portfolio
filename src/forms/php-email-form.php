@@ -8,6 +8,7 @@ class PHP_Email_Form {
   public $messages = array();
   public $ajax = false;
 
+  // Adiciona mensagens ao e-mail
   public function add_message($content, $label, $priority = 0) {
     $this->messages[] = array(
       'content' => $content,
@@ -16,7 +17,31 @@ class PHP_Email_Form {
     );
   }
 
+  // Validação dos campos
+  private function validate_fields() {
+    if (empty($this->from_name)) {
+      return 'O campo Nome é obrigatório.';
+    }
+
+    if (empty($this->from_email) || !filter_var($this->from_email, FILTER_VALIDATE_EMAIL)) {
+      return 'O e-mail fornecido é inválido.';
+    }
+
+    if (empty($this->subject)) {
+      return 'O campo Assunto é obrigatório.';
+    }
+
+    return null;
+  }
+
+  // Envio do e-mail
   public function send() {
+    // Validação antes do envio
+    $validation_error = $this->validate_fields();
+    if ($validation_error) {
+      return "Erro: $validation_error";
+    }
+
     $email_content = "";
     foreach ($this->messages as $message) {
       $email_content .= $message['label'] . ": " . $message['content'] . "\n";
@@ -29,9 +54,8 @@ class PHP_Email_Form {
     if (mail($this->to, $this->subject, $email_content, $headers)) {
       return "OK";
     } else {
-      return "Error: Email sending failed.";
+      return "Erro: Falha no envio do e-mail.";
     }
   }
 }
-
 ?>
