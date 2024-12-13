@@ -65,6 +65,7 @@ export default defineConfig({
         main: path.resolve(__dirname, "./src/index.html"),
         english: path.resolve(__dirname, "./src/english.html"),
         spanish: path.resolve(__dirname, "./src/spanish.html"),
+        
       },
       output: {
         assetFileNames: ({ name }) => {
@@ -87,6 +88,7 @@ export default defineConfig({
       },
     },
   },
+  publicDir: "src/vendor", // Trata vendor como pasta pública e estática
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
