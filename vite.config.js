@@ -100,10 +100,6 @@ export default defineConfig({
     open: true,
     port: 3000,
     proxy: {
-      "/api": {
-        target: "http://localhost:5000",
-        changeOrigin: true,
-      },
       '/forms': 'http://localhost/my-portfolio/src/forms/contact.php', // Proxy para o servidor XAMPP
     },
   },
