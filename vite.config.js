@@ -101,9 +101,9 @@ export default defineConfig({
   server: {
     open: true,
     port: 3000,
-    proxy: {
-      '/forms': 'http://localhost/my-portfolio/src/forms/contact.php', // Proxy para o servidor XAMPP
-    },
+    // proxy: {
+    //   '/forms': 'http://localhost/my-portfolio/src/forms/contact.php', // Proxy para o servidor XAMPP
+    // },
   },
   preview: {
     port: 4173,

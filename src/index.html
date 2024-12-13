@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Meu portifólio</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Description" content="Blog Portifólio">
+    <meta name="Description" content="Blog Portifólio. Portfólio de Weslei Medeiros, desenvolvedor frontend com experiência em HTML, CSS, JavaScript e outras tecnologias modernas.">
     <meta name="Keywords" content="Portifolio, frontend, programador, desenvovedor frontend, javascript">
     <meta name="author" content="Weslei Medeiros da Rosa">
 
@@ -67,13 +67,13 @@
 
         <div class="portifolio-languages">
             <ul class="change-idiom">
-                <li class="country-flag">
+                <li class="country-flag" role="button">
                     <div class="flag brazil" title="Português" id="Brazil"></div>
                 </li>
-                <li class="country-flag">
+                <li class="country-flag" role="button">
                     <div class="flag united-states" title="Inglês" id="United-states"></div>
                 </li>
-                <li class="country-flag">
+                <li class="country-flag" role="button">
                     <div class="flag spain" title="Espanhol" id="Spain"></div>
                 </li>
             </ul>
@@ -89,7 +89,11 @@
         
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <h2>Weslei Medeiros</h2>
-            <p>Eu sou <span class="typed" data-typed-items="Desenvolvedor Frontend, Amante de línguas, Freelancer"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <p>Eu sou 
+                <span class="typed" data-typed-items="Desenvolvedor Frontend, Amante de línguas, Freelancer"></span>
+                <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+                <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+            </p>
         </div>
     </section>
 
@@ -396,8 +400,7 @@
                 <div class="card__content">
                     <p class="card__title">Clínica odontológica</p>
                     <p class="card__description">Template de divulgação de uma Clínica de odontologia</p>
-                    <a href="https://devwesleymedeiros.github.io/site-odontologia/
-                    " target="_blank" rel="noopener noreferrer" class="card__button">Ver Projeto</a>
+                    <a href="https://devwesleymedeiros.github.io/site-odontologia/" target="_blank" rel="noopener noreferrer" class="card__button">Ver Projeto</a>
                     <a href="https://github.com/DevWesleyMedeiros/site-odontologia" target="_blank" rel="noopener noreferrer" class="card__button secondary">Código Fonte</a>
                 </div>
             </div>
@@ -742,18 +745,15 @@
 
   <div id="preloader"></div>
 
-  <script type="module" src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="./vendor/bootstrap/dist/css/bootstrap.min.css"></script>
-
-  <!-- <script type="module" src="./vendor/php-email-form/validate.js"></script> -->
-  <script type="module" src="./vendor/aos/aos.js"></script>
-  <script type="module" src="./vendor/typed.js/typed.umd.js"></script>
-  <script type="module" src="./vendor/purecounter/purecounter_vanilla.js"></script>
-  <script type="module" src="./vendor/waypoints/noframework.waypoints.js"></script>
-  <script type="module" src="./vendor/glightbox/js/glightbox.min.js"></script>
-  <script type="module" src="./vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script type="module" src="./vendor/jquery/jquery-3.7.1.min.js"></script>
-  
+  <script type="module" src="./vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script type="module" src="./vendor/bootstrap/css/bootstrap.min.css" defer></script>
+  <script type="module" src="./vendor/aos/aos.js" defer></script>
+  <script type="module" src="./vendor/typed.js/typed.umd.js" defer></script>
+  <script type="module" src="./vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script type="module" src="./vendor/waypoints/noframework.waypoints.js" defer></script>
+  <script type="module" src="./vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script type="module" src="./vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script type="module" src="./vendor/jquery/jquery-3.7.1.min.js" defer></script>
   <script type="module" src="./js/index.js"></script>
   <script type="module" src="./js/libs.js"></script>
 
@@ -761,19 +761,19 @@
 
     // Script que esconde o texto do botão do formulário e troca por outro para HTML em Português
 
-    $(function(){
+    (function(){
         function hiddenFormInputs(){
-        const inputFild = $('.php-email-form input, textarea');
+        const inputFild = ('.php-email-form input, textarea');
 
         inputFild.each((index, input)=>{
-            $(input).val("");
+            (input).val("");
         })
        }
         function sentButton(){
-            $('.php-email-form').find('button p').html('Enviar');
+            ('.php-email-form').find('button p').html('Enviar');
         }
 
-        $(".php-email-form").on('submit', function (event) {
+        (".php-email-form").on('submit', function (event) {
             const spansHTML = 
             `
                 <span style="--i:5">F</span>
@@ -783,7 +783,7 @@
                 <span style="--i:8">o</span>
             `;
             setTimeout(() => {
-                $(this).find(".button p").html(spansHTML);
+                (this).find(".button p").html(spansHTML);
                 hiddenFormInputs();
             }, 100);
             setTimeout(sentButton, 10000);

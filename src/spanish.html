@@ -6,12 +6,12 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Mi portafolio</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Description" content="Blog Portifólio">
+    <meta name="Description" content="Blog Portifólio Portfólio de Weslei Medeiros, desenvolvedor frontend com experiência em HTML, CSS, JavaScript e outras tecnologias modernas.">
     <meta name="Keywords" content="Portifolio, frontend, programador, desenvovedor frontend, javascript">
     <meta name="author" content="Weslei Medeiros da Rosa">
 
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" rel="preconnect">
+  <link rel="preconnect" href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,13 +58,13 @@
     <section id="hero" class="hero section dark-background">
         <div class="portifolio-languages">
             <ul class="change-idiom">
-                <li class="country-flag">
+                <li class="country-flag" role="button">
                     <div class="flag brazil" title="Versíon Portugués" id="Brazil"></div>
                 </li>
-                <li class="country-flag">
+                <li class="country-flag" role="button">
                     <div class="flag united-states" title="Versíon Inglés" id="United-states"></div>
                 </li>
-                <li class="country-flag">
+                <li class="country-flag" role="button">
                     <div class="flag spain" title="Versíon Espanõl" id="Spain"></div>
                 </li>
             </ul>
@@ -732,17 +732,15 @@
 
   <div id="preloader"></div>
 
-  <script type="module" src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="./vendor/bootstrap/dist/css/bootstrap.min.css"></script>
-
-  <!-- <script type="module" src="./vendor/php-email-form/validate.js"></script> -->
-  <script type="module" src="./vendor/aos/aos.js"></script>
-  <script type="module" src="./vendor/typed.js/typed.umd.js"></script>
-  <script type="module" src="./vendor/purecounter/purecounter_vanilla.js"></script>
-  <script type="module" src="./vendor/waypoints/noframework.waypoints.js"></script>
-  <script type="module" src="./vendor/glightbox/js/glightbox.min.js"></script>
-  <script type="module" src="./vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script type="module" src="./vendor/jquery/jquery-3.7.1.min.js"></script>
+  <script type="module" src="./vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script type="module" src="./vendor/bootstrap/css/bootstrap.min.css" defer></script>
+  <script type="module" src="./vendor/aos/aos.js" defer></script>
+  <script type="module" src="./vendor/typed.js/typed.umd.js" defer></script>
+  <script type="module" src="./vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script type="module" src="./vendor/waypoints/noframework.waypoints.js" defer></script>
+  <script type="module" src="./vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script type="module" src="./vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script type="module" src="./vendor/jquery/jquery-3.7.1.min.js" defer></script>
   
   <script type="module" src="./js/index.js"></script>
   <script type="module" src="./js/libs.js"></script>
@@ -750,19 +748,19 @@
   <script defer>
     // Script que esconde o texto do botão do formulário e troca por outro para HTML em Espanhol
 
-    $(function(){
+    (function(){
         function hiddenFormInputs(){
-        const inputFild = $('.php-email-form input, textarea');
+        const inputFild = ('.php-email-form input, textarea');
 
         inputFild.each((index, input)=>{
-            $(input).val("");
+            (input).val("");
         })
        }
         function sentButton(){
-            $('.php-email-form').find('button p').html('Enviar');
+            ('.php-email-form').find('button p').html('Enviar');
         }
 
-        $(".php-email-form").on('submit', function (event) {
+        (".php-email-form").on('submit', function (event) {
             const spansHTML = 
             `
                 <span style="--i:5">H</span>
@@ -772,7 +770,7 @@
                 <span style="--i:8">o</span>
             `;
             setTimeout(() => {
-                $(this).find(".button p").html(spansHTML);
+                (this).find(".button p").html(spansHTML);
                 hiddenFormInputs();
             }, 100);
             setTimeout(sentButton, 10000);
