@@ -68,4 +68,22 @@ function changeLanguage(lang) {
     }
     sliderTop();
 
+    // Script que muda o tema do portifolio
+    const $switch = $('.switch');
+    const $body = $('body');
+      
+    if (localStorage.getItem("theme") === "dark-theme") {
+        $body.addClass("dark-theme");
+        $switch.prop("checked", true);
+    }
+      
+    $switch.on("change", function () {
+        if ($switch.is(":checked")) {
+            $body.addClass("dark-theme");
+            localStorage.setItem("theme", "dark-theme");
+        } else {
+            $body.removeClass("dark-theme");
+            localStorage.setItem("theme", "light");
+        }
+    });
 })();

@@ -4,23 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>My portifolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>My portfolio</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="Description" content="Blog Portifólio Portfólio de Weslei Medeiros, desenvolvedor frontend com experiência em HTML, CSS, JavaScript e outras tecnologias modernas.">
-    <meta name="Keywords" content="Portifolio, frontend, programador, desenvovedor frontend, javascript">
+    <meta name="Keyword" content="Portifolio, frontend, programador, desenvovedor frontend, javascript">
     <meta name="author" content="Weslei Medeiros da Rosa">
+    <meta name="apple-mobile-web-app-title" content="My Portfolio" />
+    <link rel="icon" type="image/png" href="/icons/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/icons/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/icons/favicons/site.webmanifest" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" rel="preconnect">
-  <link rel="preconnect" href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="./vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="./vendor/aos/aos.css" rel="stylesheet">
-  <link href="./vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="./vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   
-  <link href="./css/input.css" rel="stylesheet">
+  <link href="/css/input.css" rel="stylesheet">
 
 </head>
 
@@ -28,7 +36,7 @@
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
     <div class="profile-img">
-      <img src="./img/personal_image.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="/img/personal_image.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -68,14 +76,20 @@
                 <li class="country-flag" role="button">
                     <div class="flag spain" title="Spanish version" id="Spain"></div>
                 </li>
+                <label class="ui-switch" data-toggle="tooltip" data-placement="bottom" title="Switch Theme">
+                    <input type="checkbox" class="switch">
+                    <div class="slider btn btn-secondary">
+                      <div class="circle"></div>
+                    </div>
+                </label>
             </ul>
         </div>
 
         <div class="sliders">
             <div class="slider-images_slider">
-                <img src="./img/web-developer_image.jpg" alt="Web developer image" class="web-developer" id="i1">
-                <img src="./img/idioms_images.jpg" alt="Languages" class="languages" id="i3">
-                <img src="./img/freelancer_image.jpg" alt="Imagem freelancer" class="freelancer" id="i2">
+                <img src="/img/web-developer_image.jpg" alt="Web developer image" class="web-developer" id="i1">
+                <img src="/img/idioms_images.jpg" alt="Languages" class="languages" id="i3">
+                <img src="/img/freelancer_image.jpg" alt="Imagem freelancer" class="freelancer" id="i2">
             </div>
         </div>
         
@@ -284,7 +298,7 @@
             <p>
                 You can accsess the complete English version of my resume through here 
                 <i class="bi bi-arrow-right-circle-fill ms-2 fs-1"></i>
-                <a href="./my-resume/CURRÍCULO_WESLEI_MEDEIROS_DA_ROSA_PROGRAMADOR_JUNIOR_eng - Copia.pdf" download="Weslei Medeiros CV" target="_blank" title="My English resume">
+                <a href="/my-resume/CURRÍCULO_WESLEI_MEDEIROS_DA_ROSA_PROGRAMADOR_JUNIOR_eng - Copia.pdf" download="Weslei Medeiros CV" target="_blank" title="My English resume">
                 <i class="bi bi-file-earmark-pdf ms-2 fs-1"></i>
                 </a>
             </p>
@@ -622,8 +636,8 @@
               </div>
             </div>
       
-            <div class="col-lg-7">
-              <form action="./forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-7" type="module">
+              <form action="/forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
                 <div class="row gy-4">
                   <div class="col-md-6">
                     <label for="name-field" class="pb-2">Your Name</label>
@@ -741,48 +755,18 @@
 
   <div id="preloader"></div>
   
-  <script type="module" src="./vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script type="module" src="./vendor/bootstrap/css/bootstrap.min.css"></script>
-  <script type="module" src="./vendor/aos/aos.js" defer></script>
-  <script type="module" src="./vendor/typed.js/typed.umd.js" defer></script>
-  <script type="module" src="./vendor/purecounter/purecounter_vanilla.js" defer></script>
-  <script type="module" src="./vendor/waypoints/noframework.waypoints.js" defer></script>
-  <script type="module" src="./vendor/glightbox/js/glightbox.min.js" defer></script>
-  <script type="module" src="./vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-  <script type="module" src="./vendor/jquery/jquery-3.7.1.min.js" defer></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendor/bootstrap/css/bootstrap.min.css"></script>
+  <script src="/vendor/aos/aos.js"></script>
+  <script src="/vendor/typed.js/typed.umd.js"></script>
+  <script src="/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/vendor/jquery/jquery-3.7.1.min.js"></script>
   
-  <script type="module" src="./js/index.js"></script>
-  <script type="module" src="./js/libs.js"></script>
-
-  <script defer>
-
-    // Script que esconde o texto do botão do formulário e troca por outro para HTML em Inglês
-
-    (function(){
-        function hiddenFormInputs(){
-        const inputFild = ('.php-email-form input, textarea');
-        inputFild.each((index, input)=>{
-            (input).val("");
-        })
-       }
-        function sentButton(){
-            ('.php-email-form').find('button p').html('Enviar');
-        }
-        (".php-email-form").on('submit', function (event) {
-            const spansHTML = 
-            `
-                <span style="--i:5">D</span>
-                <span style="--i:6">o</span>
-                <span style="--i:7">n</span>
-                <span style="--i:8">e</span>
-            `;
-            setTimeout(() => {
-                (this).find(".button p").html(spansHTML);
-                hiddenFormInputs();
-            }, 100);
-            setTimeout(sentButton, 10000);
-        });
-    })
-  </script>
+  <script type="module" src="/js/index.js"></script>
+  <script type="module" src="/js/libs.js"></script>
+  <script type="module" src="/js/submitBR.js"></script>
 </body>
 </html>
