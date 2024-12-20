@@ -89,7 +89,7 @@ export default defineConfig({
       },
     },
   },
-  publicDir: "src/vendor", // Trata vendor como pasta pública e estática
+  publicDir: "/vendor/", // Trata vendor como pasta pública e estática
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
