@@ -1,6 +1,7 @@
 // Script que esconde o texto do botão do formulário e troca por outro para HTML em Inglês
+import $ from 'jquery';
 
-(function(){
+$(function(){
     function hiddenFormInputs(){
     const inputFild = ('.php-email-form input, textarea');
     inputFild.each((index, input)=>{

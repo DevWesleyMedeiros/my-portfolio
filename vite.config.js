@@ -10,18 +10,16 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: '/',
+  base: '/', // Definindo a base para o projeto, normalmente raiz do domínio
+  root: './src', // Definindo o diretório de entrada principal do código-fonte
+  publicDir: 'public', // Definindo a pasta onde o Vite vai procurar arquivos estáticos (a pasta 'public' na raiz)
   plugins: [
     createHtmlPlugin({
       inject: {
-        data: {
-          title: "Portfólio Moderno",
-        },
+        data: { title: "Portfólio Moderno" },
       },
     }),
-    legacy({
-      targets: ["defaults", "not IE 11"],
-    }),
+    legacy({ targets: ["defaults", "not IE 11"] }),
     VitePWA({
       registerType: "autoUpdate",
       manifest: {
@@ -30,35 +28,13 @@ export default defineConfig({
         description: "Currículo com projetos pessoais",
         theme_color: "#ffffff",
         icons: [
-          {
-            src: "/src/assets/icons/icon-192x192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "/src/assets/icons/icon-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
-          },
+          { src: "/assets/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+          { src: "/assets/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
         ],
       },
     }),
-    viteImagemin({
-      gifsicle: { optimizationLevel: 7 },
-      optipng: { optimizationLevel: 7 },
-      mozjpeg: { quality: 80 },
-      svgo: {
-        plugins: [
-          { name: "removeViewBox" },
-          { name: "removeEmptyAttrs", active: false },
-        ],
-      },
-    }),
-    compression({
-      algorithm: "gzip",
-    }),
+    ...(process.env.NODE_ENV === "production" ? [viteImagemin(), compression()] : []),
   ],
-  root: "./src",
   build: {
     outDir: "../dist",
     rollupOptions: {
@@ -66,11 +42,10 @@ export default defineConfig({
         main: path.resolve(__dirname, "./src/index.html"),
         english: path.resolve(__dirname, "./src/english.html"),
         spanish: path.resolve(__dirname, "./src/spanish.html"),
-        
       },
       output: {
         assetFileNames: ({ name }) => {
-          if (/\.(gif|jpe?g|png|svg|ico|webp|avif|)$/.test(name || "")) {
+          if (/\.(gif|jpe?g|png|svg|ico|webp|avif)$/.test(name || "")) {
             return "assets/images/[name]-[hash][extname]";
           }
           if (/\.(css)$/.test(name || "")) {
@@ -89,7 +64,6 @@ export default defineConfig({
       },
     },
   },
-  publicDir: "/vendor/", // Trata vendor como pasta pública e estática
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
@@ -102,9 +76,6 @@ export default defineConfig({
   server: {
     open: true,
     port: 3000,
-    // proxy: {
-    //   '/forms': 'http://localhost/my-portfolio/src/forms/contact.php', // Proxy para o servidor XAMPP
-    // },
   },
   preview: {
     port: 4173,

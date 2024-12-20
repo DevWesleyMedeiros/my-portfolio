@@ -1,4 +1,6 @@
 // Script que altera o idioma do projeto
+import $ from 'jquery';
+
 const flags = [...document.querySelectorAll(".country-flag > .flag")];
 
 flags.forEach((flag) => {
