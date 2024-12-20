@@ -1161,7 +1161,7 @@ section,
     transition: all 0.7s ease;
   }
   .card__button:hover {
-    background-color: #7d0fe3;
+    background-color: var(--line-nav-item);
     color: var(--background-color);
   }
   .secondary {
