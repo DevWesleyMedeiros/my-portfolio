@@ -6,46 +6,46 @@
     "type": "module",
     "private": true,
     "scripts": {
-      "test": "vitest",
-      "dev": "vite",
-      "build": "vite build",
-      "preview": "vite preview"
+        "test": "vitest",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/DevWesleyMedeiros/my-portfolio.git"
+        "type": "git",
+        "url": "git+https://github.com/DevWesleyMedeiros/my-portfolio.git"
     },
     "keywords": [
-      "HTML5",
-      "CSS3",
-      "Javascript",
-      "PHP",
-      "AOSJs",
-      "SASS",
-      "portifolio",
-      "frontend"
+        "HTML5",
+        "CSS3",
+        "Javascript",
+        "PHP",
+        "AOSJs",
+        "SASS",
+        "portifolio",
+        "frontend"
     ],
     "author": "Weslei Medeiros da Rosa",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/DevWesleyMedeiros/my-portfolio/issues"
+        "url": "https://github.com/DevWesleyMedeiros/my-portfolio/issues"
     },
     "homepage": "https://github.com/DevWesleyMedeiros/my-portfolio#readme",
     "devDependencies": {
-      "@types/node": "^22.10.1",
-      "@vitejs/plugin-legacy": "^6.0.0",
-      "autoprefixer": "^10.4.20",
-      "tailwindcss": "^3.4.16",
-      "vite": "^6.0.3",
-      "vite-plugin-compression": "^0.5.1",
-      "vite-plugin-html": "^3.2.2",
-      "vite-plugin-imagemin": "^0.4.6",
-      "vite-plugin-pwa": "^0.21.1",
-      "vite-plugin-static-copy": "^2.2.0",
-      "vitest": "^2.1.8"
+        "@types/node": "^22.10.1",
+        "@vitejs/plugin-legacy": "^6.0.0",
+        "autoprefixer": "^10.4.20",
+        "tailwindcss": "^3.4.16",
+        "vite": "^6.0.3",
+        "vite-plugin-compression": "^0.5.1",
+        "vite-plugin-html": "^3.2.2",
+        "vite-plugin-imagemin": "^0.4.6",
+        "vite-plugin-pwa": "^0.21.1",
+        "vite-plugin-static-copy": "^2.2.0",
+        "vitest": "^2.1.8"
     },
     "dependencies": {
-      "jquery": "^3.7.1"
+        "jquery": "^3.7.1",
+        "vercel": "^39.2.2"
     }
-  }
-  
+}

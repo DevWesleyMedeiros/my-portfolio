@@ -23,10 +23,11 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       manifest: {
-        name: "Portfólio",
-        short_name: "Portfolio",
-        description: "Currículo com projetos pessoais",
+        name: "Poritfólio",
+        short_name: "Portifólio",
+        description: "Portifólio com projetos pessoais",
         theme_color: "#ffffff",
+        lang: "br",
         icons: [
           { src: "/assets/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
           { src: "/assets/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
