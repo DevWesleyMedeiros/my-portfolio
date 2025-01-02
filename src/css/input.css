@@ -365,7 +365,7 @@ h6 {
 }
 /* Fim da estilização da nav menu */
 
-/* Inicio da estilazação do ícone de pre-loader */
+/* Inicio da estilização do ícone de pre-loader */
 #preloader {
   position: fixed;
   inset: 0;
@@ -1698,3 +1698,65 @@ section,
     text-align: center;
   }
   /* Fim da estilização do footer */
+
+  /* Inicio da estilização para section challanges */
+.challanges {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-programming-languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-programming-languages > ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .container-programming-languages > ul > li {
+    display: inline-block;
+    margin: 1rem;
+    text-align: center;
+  }
+  
+  .container-programming-languages ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .container-programming-languages ul li a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Estilo do ícone com animação */
+  .tech-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    animation: up-down 1.5s ease-in-out infinite;
+  }
+  
+  /* Animação de subida e descida suave */
+  @keyframes up-down {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px); /* Ajuste a altura do movimento */
+    }
+  }
+  /* Final da section challanges */
