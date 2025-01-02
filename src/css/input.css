@@ -888,6 +888,7 @@ section,
   transition: 0.9s;
   background-color: var(--accent-color);
 }
+/* Final da estilização da section about  */
 
 .resume .resume-title {
   color: var(--heading-color);
@@ -951,6 +952,26 @@ section,
 .resume-document > p{
    margin-top: 0.5rem;
 }
+.container .resume-document .bi-file-earmark-pdf {
+    animation: shimmer 1.5s infinite;
+}
+
+/* Animação cintilante */
+@keyframes shimmer {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
+        color: #ff4500;
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1);
+        color: var(--accent-color);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
+        color: #007bff;
+    }
+}
+/* Fim da estilizalçao da section resume */
 
 /* INÍCIO DOS ESTILOS PARA OS CARDS */
 
