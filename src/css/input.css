@@ -1764,20 +1764,47 @@ section,
   }
   
   /* Estilo do ícone com animação */
-  .tech-icon {
+  .tech-icon{
     width: 64px;
     height: 64px;
     margin: 0 auto;
     animation: up-down 1.5s ease-in-out infinite;
   }
-  
-  /* Animação de subida e descida suave */
+  .soft-skills-icon{
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    animation: right-left 1.5s ease-in-out infinite;
+  }
+  .hard-skills-icon{
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    animation: left-right 1.5s ease-in-out infinite;
+  }
   @keyframes up-down {
     0%, 100% {
       transform: translateY(0);
     }
     50% {
       transform: translateY(-5px); /* Ajuste a altura do movimento */
+    }
+  }
+  /* Animação de subida e descida suave */
+  @keyframes left-right {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-5px); /* Ajuste a altura do movimento */
+    }
+  }
+  @keyframes right-left {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px); /* Ajuste a altura do movimento */
     }
   }
   /* Final da section challanges */
