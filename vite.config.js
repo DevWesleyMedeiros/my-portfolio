@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import ViteStaticCopy from "vite-plugin-static-copy";
 import path from "path";
 import { createHtmlPlugin } from "vite-plugin-html";
 import { VitePWA } from "vite-plugin-pwa";
@@ -15,14 +14,6 @@ export default defineConfig({
   root: './src', // Definindo o diretório de entrada principal do código-fonte
   publicDir: 'public', // Definindo a pasta onde o Vite vai procurar arquivos estáticos (a pasta 'public' na raiz)
   plugins: [
-    ViteStaticCopy({
-        targets: [
-          {
-            src: './src/my-resume/*',
-            dist: './dist/assets/pdfs'
-          }
-        ]
-      }),
     createHtmlPlugin({
       inject: {
         data: { title: "Portfólio Moderno" },
@@ -65,7 +56,7 @@ export default defineConfig({
             return "assets/fonts/[name]-[hash][extname]";
           }
           if (/\.(pdf)$/.test(name || "")) {
-            return "assets/pdfs/[name]-[hash][extname]";
+            return "assets/pdf/[name]-[hash][extname]";
           }
           return "assets/[name]-[hash][extname]";
         },
