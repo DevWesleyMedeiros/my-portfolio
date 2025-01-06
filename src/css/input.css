@@ -1699,26 +1699,6 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
-/* Inicio da estilização do footer */
-.footer {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-size: 14px;
-    padding: 40px 0;
-    position: relative;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .copyright p {
-    margin-bottom: 0;
-  }
-  
-  .footer .credits {
-    margin-top: 4px;
-    font-size: 13px;
-    text-align: center;
-  }
-  /* Fim da estilização do footer */
 
   /* Inicio da estilização para section challanges */
 .challanges {
@@ -1808,3 +1788,24 @@ section,
     }
   }
   /* Final da section challanges */
+
+  /* Inicio da estilização do footer */
+.footer {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-size: 14px;
+    padding: 40px 0;
+    position: relative;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+  
+  .footer .copyright p {
+    margin-bottom: 0;
+  }
+  
+  .footer .credits {
+    margin-top: 4px;
+    font-size: 13px;
+    text-align: center;
+  }
+  /* Fim da estilização do footer */
