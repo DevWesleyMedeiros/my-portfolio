@@ -1055,7 +1055,7 @@ section,
     background-image: url("../img/imagem_imobiliaria.jpg");
   }
   .clone-spotify{
-    background-color: url("../img/clone_spotify.png");
+    background-image: url("../img/clone_spotify.png");
   }
   .center .hangman-game{
     background-image: url("../img/imagem_jogo_da_forca.jpg");
@@ -1736,7 +1736,7 @@ section,
     text-decoration: none;
     cursor: pointer;
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-top: 0.5rem;
     color: #333;
     font-weight: 500;
