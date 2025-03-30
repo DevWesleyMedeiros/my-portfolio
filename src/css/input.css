@@ -1035,6 +1035,7 @@ section,
   /* Fim cards para mobile */
 
 
+  /* Imagens dos cards */
   .center .agencie-card {
     background-image: url("../img/imagem_agencia_digital.jpg");
   }
@@ -1052,6 +1053,9 @@ section,
   }
   .center .Cena-SPA{
     background-image: url("../img/imagem_imobiliaria.jpg");
+  }
+  .clone-spotify{
+    background-color: url("../img/clone_spotify.png");
   }
   .center .hangman-game{
     background-image: url("../img/imagem_jogo_da_forca.jpg");
