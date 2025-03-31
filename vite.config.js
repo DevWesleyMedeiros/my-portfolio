@@ -34,7 +34,7 @@ export default defineConfig({
         ],
       },
     }),
-    ...(process.env.NODE_ENV === "production" ? [viteImagemin(), compression()] : []),
+    ...(process.env.NODE_ENV === "production" ? [viteImagemin, compression()] : []),
   ],
   build: {
     outDir: "../dist",

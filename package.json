@@ -46,6 +46,6 @@
     },
     "dependencies": {
         "jquery": "^3.7.1",
-        "vercel": "^39.2.2"
+        "vercel": "^39.4.2"
     }
 }
