@@ -1,4 +1,4 @@
-# Weslley Medeiros - Portfólio de Desenvolvimento Web
+# Weslei Medeiros - Portfólio de Desenvolvimento Web
 
 Bem-vindo ao meu portfólio de desenvolvimento web! Meu nome é **Weslei Medeiros da Rosa** e estudo **Desenvolvimento Web Frontend** há aproximadamente um ano. Atualmente, estou em busca da minha primeira oportunidade na área de programação. Possuo experiências prévias de trabalho em empresas, no setor administrativo o que me ajuda a ter uma visão analítica e organizada nos projetos, porém nenhuma delas com desenvolvimento web.
 
