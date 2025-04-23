@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import path from "path";
 import { createHtmlPlugin } from "vite-plugin-html";
+import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 import legacy from "@vitejs/plugin-legacy";
 import viteImagemin from "vite-plugin-imagemin";
@@ -14,6 +15,7 @@ export default defineConfig({
   root: './src', // Definindo o diretório de entrada principal do código-fonte
   publicDir: 'public', // Definindo a pasta onde o Vite vai procurar arquivos estáticos (a pasta 'public' na raiz)
   plugins: [
+    react(),
     createHtmlPlugin({
       inject: {
         data: { title: "Portfólio Moderno" },

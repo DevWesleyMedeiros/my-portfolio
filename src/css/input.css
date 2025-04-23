@@ -117,8 +117,30 @@ h6 {
 .header .profile-img img {
   margin: 15px auto;
   display: block;
-  width: 120px;
+  width: 170px;
   border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  transition: background-color 0.7s ease-in-out;
+  animation: color-cycling 5s infinite alternate;
+}
+@keyframes color-cycling {
+  0% {
+    background-color: #ff0000;
+  }
+  25% {
+    background-color: #00ff00;
+  }
+  50% {
+    background-color: #0000ff;
+  }
+  75% {
+    background-color: #ff00ff;
+  }
+  100% {
+    background-color: #ffff00;
+  }
+  0% {
+    background-color: #ff0000;
+  }
 }
 
 .header .logo {
