@@ -10,9 +10,9 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: '/', // Definindo a base para o projeto, normalmente raiz do domínio
-  root: './src', // Definindo o diretório de entrada principal do código-fonte
-  publicDir: 'public', // Definindo a pasta onde o Vite vai procurar arquivos estáticos (a pasta 'public' na raiz)
+  base: "/", // Definindo a base para o projeto, normalmente raiz do domínio
+  root: "./src", // Definindo o diretório de entrada principal do código-fonte
+  publicDir: "public", // Definindo a pasta onde o Vite vai procurar arquivos estáticos (a pasta 'public' na raiz)
   plugins: [
     createHtmlPlugin({
       inject: {
@@ -29,12 +29,22 @@ export default defineConfig({
         theme_color: "#ffffff",
         lang: "br",
         icons: [
-          { src: "/assets/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
-          { src: "/assets/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
+          {
+            src: "/assets/icons/icon-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/assets/icons/icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
         ],
       },
     }),
-    ...(process.env.NODE_ENV === "production" ? [viteImagemin, compression()] : []),
+    ...(process.env.NODE_ENV === "production"
+      ? [viteImagemin, compression()]
+      : []),
   ],
   build: {
     outDir: "../dist",
@@ -42,7 +52,6 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, "./src/index.html"),
         english: path.resolve(__dirname, "./src/english.html"),
-        spanish: path.resolve(__dirname, "./src/spanish.html"),
       },
       output: {
         assetFileNames: ({ name }) => {

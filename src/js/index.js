@@ -14,7 +14,7 @@ function changeLanguage(lang) {
     if (lang === 'United-states') {
         window.location.href = 'english.html';
     } else if (lang === 'Spain') {
-        window.location.href = 'spanish.html';
+        window.location.href = "index.html";
     } else {
         window.location.href = 'index.html';
     }
