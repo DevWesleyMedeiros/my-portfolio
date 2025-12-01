@@ -1,4 +1,0 @@
-PROBLEMAS QUE EU DEVO AJUSTAR NO CÓDIGO NO FUTURO
-
-1 - ajustar o formulário para envio reais
-2 - ajustar o projeto de agenda de tarefas
