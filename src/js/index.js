@@ -12,9 +12,7 @@ flags.forEach((flag) => {
 
 function changeLanguage(lang) {
     if (lang === 'United-states') {
-        window.location.href = 'english.html';
-    } else if (lang === 'Spain') {
-        window.location.href = "index.html";
+        window.location.href = "english.html";
     } else {
         window.location.href = 'index.html';
     }
