@@ -1,6 +1,6 @@
 # Weslei Medeiros - Portfólio de Desenvolvimento Web
 
-Bem-vindo ao meu portfólio de desenvolvimento web! Meu nome é **Weslei Medeiros da Rosa** e estudo **Desenvolvimento Web Frontend** há aproximadamente um oite meses. Atualmente, estou em busca da minha primeira oportunidade na área de programação. Possuo experiências prévias de trabalho em empresas, no setor administrativo o que me ajuda a ter uma visão analítica e organizada nos projetos, porém nenhuma delas com desenvolvimento web.
+Bem-vindo ao meu portfólio de desenvolvimento web! Meu nome é **Weslei Medeiros da Rosa** e estudo **Desenvolvimento Web fullstack** há aproximadamente um ano. Atualmente, estou em busca da minha primeira oportunidade na área de programação. Possuo experiências prévias de trabalho em empresas, no setor administrativo e industrial o que me ajuda a ter uma visão analítica e organizada nos projetos, porém nenhuma delas com desenvolvimento web.
 
 ## Objetivo do Portfólio
 
@@ -8,38 +8,23 @@ Este portfólio foi criado com o intuito de demonstrar minhas habilidades técni
 
 ## Projetos em Destaque
 
-### 1. Site para Download de Livros
+### 1. projeto de uma hamburgueria (em andamento)
 
-- **Descrição:** Projeto Frontend: uma site que permite o download de livros, integrando APIs externas para disponibilizar conteúdo gratuito.
+- **Descrição:** Projeto Fullstack: uma página que simula uma hamburgueria com funcionalidades de pedidos de hamburgues, inclusão de novos cardápios, gerenciamento de usuário (admin e user); formulários de login e cadastro e mais. Todas as informações são persistidas num banco de dados que acessamos e manipulamos via API do nodejs com framework express e Prisma ORM. O projeto usa arquitura moderna MVC com algumas adaptações
 
-- **Tecnologias:** HTML5, CSS3, JavaScript com typescript, Jquery, Axios, API REST.
-
-### 2. Vitrine de Motos
-
-- **Descrição:** Um sistema que exibe motos disponíveis para venda, com integração de backend utilizando PHP e MySQL.
-- **Tecnologias:** PHP, MySQL, HTML5, CSS3, Javascript, Jquery.
-
-### 3. Gerenciador de Tarefas
-
-- **Descrição:** Um sistema de gerenciamento de tarefas, para ajustar suas tarefas em ordem, deletar, editar e adicionar etc.
-- **Tecnologias:** HTML5, CSS3, JavaScript com typescript no ElectronJs
-
-### 4. Clone do Spotify
-
-- **Descrição** Um projeto criado em aula em um dos eventos de intensivão React da Hashtag treinamento. Desafio era criar uma réplica do front-end do aplicativo de música mais famoso do Mundo
-- **Tecnologias** HTML5, CSS3, Javascript com React e Vite
+- **Tecnologias:** React com Typescript, Tailwindcss, Axios, NodeJs, Prisma ORM e Postgresql
 
 ## Minha Stack
 
 ### Linguagens e Ferramentas
 
 - **Frontend:** HTML5, CSS3, JavaScript, TypeScript e React
-- **Backend:** PHP, MySQL.
+- **Backend:** NodeJs, Postgresql, Prisma ORM, MySQL.
 - **Frameworks CSS:** Bootstrap, TailwindCSS, Sass.
-- **Frameworks JavaScript:** Next.js.
+- **Frameworks JavaScript:** Next.js e Express.
 - **Bibliotecas JavaScript:** React, Jquery, Axios, ElectronJs.
-- **Ferramentas e Bundlers:** Webpack, Vite.
-- **Testes:** Vitest.
+- **Ferramentas e Bundlers:** Webpack, Vite, npm, bun
+- **Testes:** Vitest
 - **Controle de Versão:** Git e GitHub.
 
 ### Diferenciais
@@ -51,15 +36,14 @@ Este portfólio foi criado com o intuito de demonstrar minhas habilidades técni
 
 ## Como Acessar Meus Projetos
 
+- **Através desse portifólio:** Ou
 - **Projetos Frontend Básicos:** Disponíveis no meu [GitHub](https://github.com/DevWesleyMedeiros).
 
-- **Projetos Mais Complexos:** Com deploy no [Vercel](https://vercel.com/wesleys-projects-bc329e0a).
-
-- Dentro do portfólio, cada card possui links diretos para visualização e acesso ao código-fonte.
+- Dentro do portfólio, cada card possui links diretos para visualização e acesso ao código-fonte do projeto.
 
 ## Contato
 
-- [LinkedIn](https://www.linkedin.com/in/weslei-medeiros/)
+- [LinkedIn](https://www.linkedin.com/in/weslei-medeiros)
 - [GitHub](https://github.com/DevWesleyMedeiros)
 - E-mail: <devwesleymedeiros@outlook.com>
 
