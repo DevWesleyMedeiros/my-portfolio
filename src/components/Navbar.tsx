@@ -1,8 +1,8 @@
-import { Globe, Mail, Menu, MessageCircle, Moon, Sun, User, X } from 'lucide-react'
-import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { useLanguage } from '../context/LanguageContext'
-import { useTheme } from '../context/ThemeContext'
+import { Globe, Mail, Menu, MessageCircle, Moon, Sun, User, X } from 'lucide-react';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Navbar() {
   const { isDark, toggleTheme } = useTheme()
@@ -10,6 +10,7 @@ export default function Navbar() {
   const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // home nav
   const navItems = [
     { path: '/', label: 'home' },
     { path: '/about', label: 'about' },
@@ -25,16 +26,17 @@ export default function Navbar() {
       className={`sticky top-0 z-50 backdrop-blur-md transition-colors duration-300 ${isDark ? 'bg-gray-900/80 border-b border-gray-800' : 'bg-white/80 border-b border-gray-200'}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        {/* ícone do WR */}
+        <div className="w-full flex items-center justify-between h-16 px-6">
           <Link
             to="/"
             className="font-bold text-xl bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
           >
-            WM
+            WR
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -47,24 +49,27 @@ export default function Navbar() {
           </div>
 
           {/* Controls */}
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 rounded-full p-1">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 bg-gray-100 dark:bg-gray-800 rounded-full px-6 py-3">
               <button
+                type="button"
                 onClick={() => setLanguage('pt')}
-                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${language === 'pt' ? (isDark ? 'bg-purple-700 text-white' : 'bg-purple-600 text-white') : isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}
+                className={`px-6 py-3 rounded-full text-sm font-semibold transition-all ${language === 'pt' ? (isDark ? 'bg-purple-700 text-white' : 'bg-purple-600 text-white') : isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}
               >
                 PT
               </button>
               <button
+                type="button"
                 onClick={() => setLanguage('en')}
-                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${language === 'en' ? (isDark ? 'bg-purple-700 text-white' : 'bg-purple-600 text-white') : isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}
+                className={`px-6 py-3 rounded-full text-sm font-semibold transition-all ${language === 'en' ? (isDark ? 'bg-purple-700 text-white' : 'bg-purple-600 text-white') : isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}
               >
                 EN
               </button>
             </div>
             <button
+              type="button"
               onClick={toggleTheme}
-              className={`p-2 rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-yellow-400' : 'hover:bg-gray-100 text-gray-700'}`}
+              className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-yellow-400' : 'hover:bg-gray-100 text-gray-700'}`}
               aria-label="Toggle theme"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
@@ -76,7 +81,7 @@ export default function Navbar() {
                 href="https://github.com/DevWesleyMedeiros"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2 rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
+                className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
               >
                 <Globe size={20} />
               </a>
@@ -84,7 +89,7 @@ export default function Navbar() {
                 href="https://www.instagram.com/wesleimedeyros/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2 rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
+                className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
               >
                 <User size={20} />
               </a>
@@ -92,7 +97,7 @@ export default function Navbar() {
                 href="https://www.linkedin.com/in/weslei-medeiros/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2 rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
+                className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
               >
                 <Mail size={20} />
               </a>
@@ -100,14 +105,18 @@ export default function Navbar() {
                 href="https://wa.me/555596817802?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20conversar%20com%20o%20Wesley"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2 rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
+                className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
               >
                 <MessageCircle size={20} />
               </a>
             </div>
 
             {/* Mobile menu toggle */}
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2">
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors"
+            >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>

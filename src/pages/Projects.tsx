@@ -63,26 +63,26 @@ export default function Projects() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-8 bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
           {t('projects')}
         </h2>
 
-        <div className="flex gap-3 mb-10">
+        <div className="flex flex-wrap gap-6 mb-14 justify-center">
           <button
             onClick={() => setFilter('all')}
-            className={`px-6 py-2 rounded-full font-medium transition-all ${filter === 'all' ? 'bg-purple-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'}`}
+            className={`px-14 py-5 rounded-full font-semibold transition-all ${filter === 'all' ? 'bg-purple-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'}`}
           >
             Todos
           </button>
           <button
             onClick={() => setFilter('frontend')}
-            className={`px-6 py-2 rounded-full font-medium transition-all ${filter === 'frontend' ? 'bg-purple-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'}`}
+            className={`px-14 py-5 rounded-full font-semibold transition-all ${filter === 'frontend' ? 'bg-purple-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'}`}
           >
             Frontend
           </button>
           <button
             onClick={() => setFilter('fullstack')}
-            className={`px-6 py-2 rounded-full font-medium transition-all ${filter === 'fullstack' ? 'bg-purple-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'}`}
+            className={`px-14 py-5 rounded-full font-semibold transition-all ${filter === 'fullstack' ? 'bg-purple-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'}`}
           >
             Fullstack
           </button>
@@ -104,10 +104,10 @@ export default function Projects() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+              <div className="p-16 space-y-7">
+                <h3 className="text-xl font-bold mb-3">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-4">
                   {project.live && (
                     <a
                       href={project.live}

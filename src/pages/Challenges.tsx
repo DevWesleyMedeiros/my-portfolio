@@ -2,11 +2,31 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
 
 const challenges = [
-  { language: 'JavaScript', icon: '/src/icons/JS_TS_icon_64.png', repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_JS' },
-  { language: 'TypeScript', icon: '/src/icons/ts_icon_64.png', repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_JS' },
-  { language: 'Python', icon: '/src/icons/phyton_icon_64.png', repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_PYTHON' },
-  { language: 'Java', icon: '/src/icons/java_icon_64.png', repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_JAVA' },
-  { language: 'C#', icon: '/src/icons/csharp_icon_64.png', repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_C%23' },
+  {
+    language: 'JavaScript',
+    icon: '/src/icons/JS_TS_icon_64.png',
+    repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_JS',
+  },
+  {
+    language: 'TypeScript',
+    icon: '/src/icons/ts_icon_64.png',
+    repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_JS',
+  },
+  {
+    language: 'Python',
+    icon: '/src/icons/phyton_icon_64.png',
+    repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_PYTHON',
+  },
+  {
+    language: 'Java',
+    icon: '/src/icons/java_icon_64.png',
+    repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_JAVA',
+  },
+  {
+    language: 'C#',
+    icon: '/src/icons/csharp_icon_64.png',
+    repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_C%23',
+  },
 ]
 
 export default function Challenges() {
@@ -19,7 +39,7 @@ export default function Challenges() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-8 bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
           {t('challenges')}
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">

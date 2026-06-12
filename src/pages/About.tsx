@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion'
-import { Globe } from 'lucide-react'
-import { useLanguage } from '../context/LanguageContext'
-import { useTheme } from '../context/ThemeContext'
+import { motion } from 'framer-motion';
+import { Globe } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { useTheme } from '../context/ThemeContext';
 
 export default function About() {
   const { t } = useLanguage()
@@ -23,18 +23,18 @@ export default function About() {
           {t('about')}
         </h2>
 
-        <div className="grid items-start gap-12 md:grid-cols-2">
-          <div className="space-y-6">
+        <div className="grid items-start gap-16 md:grid-cols-2">
+          <div className="space-y-10">
             <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               {t('aboutText')}
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
+            <div className="flex flex-wrap gap-8 mt-6">
+              <div className="flex items-center gap-3 px-10 py-5 bg-blue-100 dark:bg-blue-900/30 rounded-full">
                 <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 <span className="text-sm font-medium">English (C1)</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-yellow-100 dark:bg-yellow-900/30 rounded-full">
+              <div className="flex items-center gap-3 px-10 py-5 bg-yellow-100 dark:bg-yellow-900/30 rounded-full">
                 <Globe className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />
                 <span className="text-sm font-medium">Spanish (B1)</span>
               </div>
