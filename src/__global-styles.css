@@ -1,17 +1,158 @@
+/* src/__global-styles.css */
 @import "tailwindcss";
+/* ordem prateleira (layers do Tailwindcss) @layer theme, base, components, utilities; */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+}
+@theme {
+  --animate-gradient-x: gradient-x 4s ease-in-out infinite ;
 }
 
-*::before,
-*::after {
-  box-sizing: border-box;
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
-html,
-body {
-  min-height: 100%;
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  50% {
+    transform: translateX(150%) skewX(-100deg);
+  }
+  100% {
+    transform: translateX(-150%) skewY(20deg);
+  }
+}
+
+@layer components {
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.55),
+      transparent
+    );
+    animation: shimmer 2.8s infinite;
+  }
+}
+/* --- NOVO: sweep de hover (dispara 1x por mouseenter) --- */
+@keyframes shimmer-sweep {
+  from {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  to {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+/* --- NOVO: ângulo animável para o glow giratório do card --- */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 135deg;
+  inherits: false;
+}
+
+@keyframes rotate-glow {
+  from {
+    --angle: 135deg;
+  }
+  to {
+    --angle: 495deg; /* 135deg + 360deg = 1 volta completa, sentido horário */
+  }
+}
+
+@layer components {
+  /* botão com brilho contínuo (Home) */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+    animation: shimmer 2.8s infinite;
+  }
+
+  /* botão com sweep disparado no hover (Projects) */
+  .btn-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-sweep::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  .btn-sweep:hover::after {
+    animation: shimmer-sweep 0.7s ease;
+  }
+
+  /* glow giratório no canto do card */
+  .card-glow {
+    position: relative;
+    isolation: isolate;
+    --angle: 135deg;
+  }
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: conic-gradient(
+      from var(--angle),
+      transparent 0deg,
+      transparent 300deg,
+      #a855f7 330deg,
+      #3b82f6 360deg
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .card-glow:hover::before {
+    opacity: 1;
+    animation: rotate-glow 2.5s linear infinite;
+  }
 }

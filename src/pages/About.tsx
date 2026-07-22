@@ -8,35 +8,35 @@ export default function About() {
   const { isDark } = useTheme()
 
   const stats = [
-    { label: t('repos'), value: 20, icon: '📁' },
-    { label: t('projectsCompleted'), value: 2, icon: '🚀' },
+    { label: t('repos'), value: 13, icon: '📁' },
+    { label: t('projectsCompleted'), value: 1, icon: '🚀' },
   ]
 
   return (
-    <div className="min-h-screen px-4 py-20 max-w-7xl mx-auto">
+    <div className="max-w-screen h-screen mx-auto flex ">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl font-bold mb-8 bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
           {t('about')}
         </h2>
 
-        <div className="grid items-start gap-16 md:grid-cols-2">
-          <div className="space-y-10">
+        <div className="flex gap-5 flex-row justify-center items-center md:flex-col ">
+          <div className="space-y-5">
             <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               {t('aboutText')}
             </p>
 
             <div className="flex flex-wrap gap-8 mt-6">
-              <div className="flex items-center gap-3 px-10 py-5 bg-blue-100 dark:bg-blue-900/30 rounded-full">
-                <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <span className="text-sm font-medium">English (C1)</span>
+              <div className="flex justify-center h-8 items-center gap-3 px-10 bg-blue-100 dark:bg-blue-900/30 rounded-full">
+                <Globe className=" text-blue-600 dark:text-blue-400" />
+                <span className="text-sm font-medium w-50 md:70">English (C1)</span>
               </div>
-              <div className="flex items-center gap-3 px-10 py-5 bg-yellow-100 dark:bg-yellow-900/30 rounded-full">
-                <Globe className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />
-                <span className="text-sm font-medium">Spanish (B1)</span>
+              <div className="flex justify-center h-8 items-center gap-3 px-10 bg-yellow-100 dark:bg-yellow-900/30 rounded-full">
+                <Globe className=" text-yellow-600 dark:text-yellow-400" />
+                <span className="text-sm font-medium w-50 md:70">Spanish (B1)</span>
               </div>
             </div>
           </div>

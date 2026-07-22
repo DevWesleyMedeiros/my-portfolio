@@ -19,8 +19,8 @@ const translations: Translations = {
   viewCode: { pt: 'Ver código fonte', en: 'View source code' },
   intro: { pt: 'Desenvolvedor Fullstack', en: 'Fullstack Developer' },
   aboutText: {
-    pt: 'Sou desenvolvedor Fullstack com foco em aplicações web (principalmente React + TypeScript) e construção/consumo de APIs. Gosto de trabalhar com UI consistente, código limpo e entregas orientadas a produto, sempre buscando equilibrar usabilidade, performance e manutenção. Tenho fluência C1 em inglês e nível B1 em espanhol (CEFR), o que facilita comunicação em times globais, leitura de documentação e colaboração em projetos internacionais.',
-    en: 'I am a Fullstack Developer focused on web applications (mainly React + TypeScript) and building/consuming APIs. I like working with consistent UI, clean code and product-oriented deliveries, always seeking to balance usability, performance and maintainability. I have C1 fluency in English and B1 level in Spanish (CEFR), which facilitates communication in global teams, reading documentation and collaborating on international projects.',
+    pt: 'Sou desenvolvedor Fullstack com foco em aplicações web React + TypeScript, NodeJs, construção/consumo de APIs. Gosto de trabalhar com UI consistente, código limpo e entregas orientadas a produto, sempre buscando equilibrar usabilidade, performance e manutenção. Tenho fluência C1 em inglês e nível B1 em espanhol (CEFR), o que facilita comunicação em times globais, leitura de documentação e colaboração em projetos internacionais.',
+    en: 'I am a Fullstack Developer focused on web applications mainly React + TypeScript, NodeJs and building/consuming APIs. I like working with consistent UI, clean code and product-oriented deliveries, always seeking to balance usability, performance and maintainability. I have C1 fluency in English and B1 level in Spanish (CEFR), which facilitates communication in global teams, reading documentation and collaborating on international projects.',
   },
   repos: { pt: 'Repositórios', en: 'Repositories' },
   projectsCompleted: { pt: 'Projetos Fullstack', en: 'Fullstack Projects' },
@@ -34,7 +34,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
+export function LanguageProvider({ children }: Readonly<{ children: ReactNode }>) {
   const [language, setLanguage] = useState<Language>('pt')
 
   const t = (key: string) => translations[key]?.[language] || key

@@ -33,16 +33,18 @@ export default function Challenges() {
   const { t } = useLanguage()
 
   return (
-    <div className="min-h-screen px-4 py-20 max-w-4xl mx-auto">
+    <div className="min-h-screen w-full flex flex-col items-center px-4 py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        className="w-full max-w-4xl flex flex-col items-center text-center"
       >
-        <h2 className="text-4xl font-bold mb-8 bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-10 bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
           {t('challenges')}
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center w-full">
           {challenges.map((challenge, index) => (
             <motion.a
               key={challenge.language}
@@ -53,7 +55,7 @@ export default function Challenges() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="flex flex-col items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all"
+              className="flex flex-col items-center gap-4 p-6 w-full rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all"
             >
               <img
                 src={challenge.icon}
