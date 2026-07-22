@@ -20,7 +20,9 @@
   }
 }
 @theme {
-  --animate-gradient-x: gradient-x 4s ease-in-out infinite ;
+  --animate-gradient-x: gradient-x 4s ease-in-out infinite;
+  --animate-gradient-x: gradient-x 4s ease infinite;
+  --animate-spin-slow: spin-slow 3s linear infinite;
 }
 
 @keyframes gradient-x {
@@ -154,5 +156,13 @@
   .card-glow:hover::before {
     opacity: 1;
     animation: rotate-glow 2.5s linear infinite;
+  }
+}
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

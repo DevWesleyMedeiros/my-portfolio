@@ -41,7 +41,7 @@ export default function Challenges() {
         className="w-full max-w-4xl flex flex-col items-center text-center"
       >
         <h2 className="text-4xl font-bold mb-10 bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-          {t('challenges')}
+          {t('challenges') + ' / ' + t('algorítmos')}
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center w-full">

@@ -26,7 +26,8 @@ const projects = [
     title: 'Burguer Joint',
     description: 'Burguer Joint web fullstack project',
     category: 'fullstack',
-    image: '/src/img//casa-do-hamburguer-project.jpg',
+    image: '/src/img//casa-do-hamburguer-project.png',
+    live: 'https://casa-do-hamburger.vercel.app/',
     repo: 'https://github.com/DevWesleyMedeiros/casa-do-hamburger',
   },
   {
