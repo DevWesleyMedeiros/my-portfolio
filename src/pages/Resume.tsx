@@ -20,10 +20,7 @@ export default function Resume() {
             <FileText className="w-8 h-8 text-purple-600" />
             <div className="text-lg font-medium">Curriculo em atualizacao</div>
           </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            Os arquivos PDF do curriculo nao estao mais no projeto. A estrutura da secao foi mantida
-            e os links de download foram removidos para evitar erro.
-          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">Currículos</p>
         </div>
         <div className="flex items-center gap-4 mb-8">
           <FileText className="w-8 h-8 text-purple-600" />
