@@ -164,25 +164,19 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`p-2 rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
-              >
-                <Globe size={24} />
-              </a>
+              ></a>
               <a
                 href="https://www.instagram.com/wesleimedeyros/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`p-2 rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
-              >
-                <User size={24} />
-              </a>
+              ></a>
               <a
                 href="https://www.linkedin.com/in/weslei-medeiros/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`p-2 rounded-full transition-colors ${isDark ? 'hover:bg-gray-800 text-gray-400 hover:text-white' : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'}`}
-              >
-                <Mail size={24} />
-              </a>
+              ></a>
             </div>
           </div>
         </div>
