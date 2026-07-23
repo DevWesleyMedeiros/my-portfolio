@@ -14,31 +14,31 @@ const challenges: {
 }[] = [
   {
     language: 'JavaScript',
-    icon: '/src/icons/JS_TS_icon_64.png',
+    icon: '/icons/JS_TS_icon_64.png',
     repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_JS',
     glow: { from: '#eab308', to: '#facc15' }, // amarelo
   },
   {
     language: 'TypeScript',
-    icon: '/src/icons/ts_icon_64.png',
+    icon: '/icons/ts_icon_64.png',
     repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_JS',
     glow: { from: '#2563eb', to: '#60a5fa' }, // azul
   },
   {
     language: 'Python',
-    icon: '/src/icons/phyton_icon_64.png',
+    icon: '/icons/phyton_icon_64.png',
     repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_PYTHON',
     glow: { from: '#1e3a8a', to: '#1d4ed8' }, // azul marinho escuro
   },
   {
     language: 'Java',
-    icon: '/src/icons/java_icon_64.png',
+    icon: '/icons/java_icon_64.png',
     repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_JAVA',
     glow: { from: '#6b7280', to: '#9ca3af' }, // acinzentado
   },
   {
     language: 'C#',
-    icon: '/src/icons/csharp_icon_64.png',
+    icon: '/icons/csharp_icon_64.png',
     repo: 'https://github.com/DevWesleyMedeiros/exercicios-programacao/tree/exercicios/EXERCICIOS_C%23',
     glow: { from: '#16a34a', to: '#4ade80' }, // verde
   },
