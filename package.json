@@ -58,6 +58,6 @@
     "react-router-dom": "^7.17.0",
     "react-tooltip": "^6.0.8",
     "tailwindcss": "^4.3.0",
-    "vercel": "^50.41.0"
+    "vercel": "^56.5.0"
   }
 }

@@ -1,15 +1,15 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import {
-  Send,
-  User,
-  Mail,
-  Tag,
-  MessageSquare,
-  Loader2,
-  CheckCircle2,
   AlertCircle,
+  CheckCircle2,
+  Loader2,
+  Mail,
+  MessageSquare,
+  Send,
+  Tag,
+  User,
 } from 'lucide-react'
-import { useState, type FormEvent } from 'react'
+import { useState, type SubmitEvent } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 
 type ContactFormData = {
@@ -29,9 +29,8 @@ const initialFormData: ContactFormData = {
 }
 
 async function submitContactForm(data: ContactFormData): Promise<void> {
-  // Mock temporário — simula latência de rede.
   await new Promise((resolve) => setTimeout(resolve, 1200))
-  console.log('Contact form payload:', data)
+  console.log('Dodos de payload enviados:', data)
 }
 
 export default function Contact() {
@@ -51,7 +50,7 @@ export default function Contact() {
     setTouched((prev) => ({ ...prev, [field]: true }))
   }
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: SubmitEvent) => {
     e.preventDefault()
 
     const allTouched = Object.keys(formData).reduce((acc, key) => ({ ...acc, [key]: true }), {})
@@ -96,13 +95,16 @@ export default function Contact() {
         <form onSubmit={handleSubmit} noValidate className="space-y-6">
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
-              <label className="block text-sm font-medium mb-2">Name</label>
+              <label className="block text-sm font-medium mb-2" htmlFor="name">
+                Name
+              </label>
               <div className="relative">
                 <User
                   size={18}
                   className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"
                 />
                 <input
+                  id="name"
                   type="text"
                   value={formData.name}
                   onChange={(e) => handleChange('name', e.target.value)}
@@ -114,13 +116,16 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Email</label>
+              <label className="block text-sm font-medium mb-2" htmlFor="email">
+                Email
+              </label>
               <div className="relative">
                 <Mail
                   size={18}
                   className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"
                 />
                 <input
+                  id="email"
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleChange('email', e.target.value)}
@@ -135,10 +140,13 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2">Subject</label>
+            <label className="block text-sm font-medium mb-2" htmlFor="subject">
+              Subject
+            </label>
             <div className="relative">
               <Tag size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" />
               <input
+                id="subject"
                 type="text"
                 value={formData.subject}
                 onChange={(e) => handleChange('subject', e.target.value)}
@@ -152,10 +160,13 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2">Message</label>
+            <label className="block text-sm font-medium mb-2" htmlFor="message">
+              Message
+            </label>
             <div className="relative">
               <MessageSquare size={18} className="absolute left-3.5 top-4 text-gray-400" />
               <textarea
+                id="message"
                 rows={5}
                 value={formData.message}
                 onChange={(e) => handleChange('message', e.target.value)}

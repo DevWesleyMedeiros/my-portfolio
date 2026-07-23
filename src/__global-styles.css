@@ -141,8 +141,8 @@
       from var(--angle),
       transparent 0deg,
       transparent 300deg,
-      #a855f7 330deg,
-      #3b82f6 360deg
+      var(--glow-from) 330deg,
+      var(--glow-to) 360deg
     );
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
@@ -158,6 +158,7 @@
     animation: rotate-glow 2.5s linear infinite;
   }
 }
+
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
