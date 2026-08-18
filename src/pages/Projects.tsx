@@ -74,6 +74,14 @@ const projects = [
     live: 'https://devwesleymedeiros.github.io/projeto-pagina-personalizada/',
     repo: 'https://github.com/DevWesleyMedeiros/projeto-Monguilhott-clinica-odontologica',
   },
+  {
+    id: 9,
+    title: 'Pomodor timer',
+    description: 'Focus flow timer project to manage your studies section',
+    category: 'fullstack',
+    image: '/img/pomodoro-timer-project.jpeg',
+    repo: 'https://github.com/DevWesleyMedeiros/focus-flow-project',
+  },
 ]
 
 const filters = [

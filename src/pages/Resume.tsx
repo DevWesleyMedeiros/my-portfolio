@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 import {
-  Download,
-  GraduationCap,
   Code2,
+  Download,
+  ExternalLink,
+  GraduationCap,
   Languages as LanguagesIcon,
   Rocket,
-  ExternalLink,
 } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa6'
 import { RiVercelFill } from 'react-icons/ri'
@@ -107,7 +107,7 @@ export default function Resume() {
           </div>
 
           <a
-            href="/resume-wesley-medeiros.pdf"
+            href="/docs/curriculo_Dev-junior_weslei_medeiros.pdf"
             download
             className="btn-sweep flex items-center gap-2 px-6 py-3 bg-linear-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all shrink-0"
           >

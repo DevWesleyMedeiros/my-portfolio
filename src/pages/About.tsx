@@ -8,8 +8,8 @@ export default function About() {
   const { isDark } = useTheme()
 
   const stats = [
-    { label: t('repos'), value: 13, icon: '📁' },
-    { label: t('projectsCompleted'), value: 1, icon: '🚀' },
+    { label: t('repos'), value: 14, icon: '📁' },
+    { label: t('projectsCompleted'), value: 2, icon: '🚀' },
   ]
 
   return (
