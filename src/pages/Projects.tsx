@@ -82,6 +82,15 @@ const projects = [
     image: '/img/pomodoro-timer-project.jpeg',
     repo: 'https://github.com/DevWesleyMedeiros/focus-flow-project',
   },
+  {
+    id: 10,
+    title: 'Brazilian elections 2026',
+    description: 'First and second round of the Brazilian elections 2026',
+    category: 'fullstack',
+    image: '/img/imagem-eleicoes-brasil-2026.jpg',
+    live: 'https://apuracao-brasil-2026-nu.vercel.app/',
+    repo: 'https://github.com/DevWesleyMedeiros/apuracao-brasil-2026',
+  },
 ]
 
 const filters = [

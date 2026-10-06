@@ -14,11 +14,11 @@ import { useTheme } from '../context/ThemeContext'
 
 const hardSkills = {
   Frontend: [
+    'Next JS',
     'React',
     'Javascript',
     'Jquery',
     'TypeScript',
-    'NextJs',
     'Tailwind CSS',
     'HTML5',
     'CSS3 / SASS',
@@ -102,7 +102,7 @@ export default function Resume() {
           <div className="flex-1 text-center sm:text-left">
             <p className="text-xl font-bold">Wesley Medeiros</p>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-              Desenvolvedor Fullstack — React / TypeScript / Node.js
+              Desenvolvedor Fullstack — Next | React | TypeScript | Node.js | Postgresql
             </p>
           </div>
 
@@ -285,6 +285,7 @@ export default function Resume() {
         </section>
 
         {/* Projeto em destaque */}
+        {/* projeto casa do hamburguer */}
         <section className="space-y-4">
           <h3 className="flex items-center gap-2 text-xl font-semibold">
             <Rocket size={22} className="text-purple-600 dark:text-purple-400" />
@@ -324,6 +325,7 @@ export default function Resume() {
                 ))}
               </div>
 
+              {/* projeto casa do hamburguer */}
               <div className="flex justify-center">
                 <a
                   href="https://github.com/DevWesleyMedeiros/casa-do-hamburger"
@@ -346,6 +348,61 @@ export default function Resume() {
                   <ExternalLink size={14} className="mx-1" />
                 </a>
               </div>
+              {/* projeto focus flow (pomodoro timer) */}
+            </div>
+          </div>
+        </section>
+        {/* projeto casa do hamburguer */}
+        <section className="space-y-4">
+          <h3 className="flex items-center gap-2 text-xl font-semibold">
+            <Rocket size={22} className="text-purple-600 dark:text-purple-400" />
+            Projeto em destaque
+          </h3>
+          <div className="card-glow rounded-2xl">
+            <div
+              className={`p-6 rounded-2xl ${
+                isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'
+              }`}
+            >
+              <p className="font-bold text-lg mb-1">Eleições Brasil 2026</p>
+              <p className={`text-sm mb-4 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                Sistema de apuração de votos para eleições presidenciais no Brasil, com dashboard
+              </p>
+              <div className="flex flex-wrap gap-2 mb-5">
+                {['Node js', 'Next js', 'React', 'TypeScript', 'Tailwindcss', 'Zod'].map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs font-medium px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* projeto eleições Brasil 2026 */}
+              <div className="flex justify-center">
+                <a
+                  href="https://github.com/DevWesleyMedeiros/apuracao-brasil-2026"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-sweep inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                >
+                  <FaGithub size={14} />
+                  Ver projeto
+                  <ExternalLink size={14} />
+                </a>
+                <a
+                  href="https://apuracao-brasil-2026-nu.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-sweep inline-flex items-center px-5 py-2.5 mx-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-700 transition-colors"
+                >
+                  <RiVercelFill size={14} />
+                  Ver projeto
+                  <ExternalLink size={14} className="mx-1" />
+                </a>
+              </div>
+              {/* projeto focus flow (pomodoro timer) */}
             </div>
           </div>
         </section>
